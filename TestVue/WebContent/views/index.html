@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <!--这是我们的View-->
+ <div id="app">
+ <p>{{ message }}</p>
+  <input type="text" v-model="message"/>
+  <input type="text" v-model="thisColor"/>
+  <input type="button" v-on:click="changeColor" value="按钮"/>
+ </div>
+</body>
+<script src="../javascript/vue.js"></script>
+<script type="text/javascript">
+var exampleData = {
+		message: 'Hello World!',
+		colors:['red','blue'],
+		items:[],
+		thisColor:''
+};
+//创建Vue对象
+new Vue({
+	el: '#app',
+	data: exampleData,//初始换方法
+	methods:{
+		//定义方法
+		changeColor: function(){
+			var _self = this;
+			alert(_self.colors[0]);
+			_self.thisColor = _self.colors[0];
+		}
+	}
+});
+</script>
+</html>
