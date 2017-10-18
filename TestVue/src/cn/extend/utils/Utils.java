@@ -5,4 +5,5 @@ public class Utils {
 	
 	public static String AGE = "26";
 	String name = "11";
+	String age = "1";
 }
